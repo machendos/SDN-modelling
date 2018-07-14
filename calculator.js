@@ -25,11 +25,13 @@ function calculator(
     ];
     const maxDignity = Math.max(userFirstCard[0], userSecondCard[0]);
     const minDignity = Math.min(userFirstCard[0], userSecondCard[0]);
-    return probabilities[maxDignity + ''][userFirstCard[1] === userSecondCard[1] ? 20 + minDignity + '' : minDignity + ''];
+    return probabilities[maxDignity + ''][
+      userFirstCard[1] === userSecondCard[1] ?
+        20 + minDignity + '' : minDignity + ''
+    ];
   } else {
     return new Error('Incorrect number of arguments');
   }
 }
 
 module.exports = calculator;
-// console.log(calculator([25, 18]));
